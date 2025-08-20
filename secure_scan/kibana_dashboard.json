@@ -1,0 +1,45 @@
+{
+  "attributes": {
+    "title": "🔐 Security Scans Dashboard",
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": {
+        "index": "security-scans",
+        "filter": [],
+        "query": { "query": "", "language": "lucene" }
+      }
+    },
+    "version": 1,
+    "timeRestore": false,
+    "panelsJSON": [
+      {
+        "id": "risk-level-pie",
+        "type": "visualization",
+        "panelIndex": 1,
+        "gridData": { "x": 0, "y": 0, "w": 6, "h": 6 },
+        "version": "8.11.3"
+      },
+      {
+        "id": "security-score-histogram",
+        "type": "visualization",
+        "panelIndex": 2,
+        "gridData": { "x": 6, "y": 0, "w": 6, "h": 6 },
+        "version": "8.11.3"
+      },
+      {
+        "id": "targets-table",
+        "type": "visualization",
+        "panelIndex": 3,
+        "gridData": { "x": 0, "y": 6, "w": 12, "h": 6 },
+        "version": "8.11.3"
+      }
+    ]
+  },
+  "type": "dashboard",
+  "references": [
+    {
+      "id": "security-scans",
+      "name": "kibana-data-table-tableColumns",
+      "type": "index-pattern"
+    }
+  ]
+}

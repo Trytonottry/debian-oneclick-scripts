@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>🔐 SecureScan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 SecureScan</h1>
+    <p>Автоматизированный сканер безопасности с визуализацией</p>
+
+    <form action="/scan" method="post">
+      <input type="text" name="target" placeholder="example.com" required>
+      <button type="submit">Сканировать</button>
+    </form>
+
+    <h3>Последние отчёты</h3>
+    <ul>
+      {% for r in recent %}
+        <li><a href="/download/{{ r }}">{{ r }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
