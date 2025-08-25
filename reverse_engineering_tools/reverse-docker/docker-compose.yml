@@ -1,0 +1,10 @@
+version: '3'
+services:
+  reverse:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apks:/home/tools/apks
+    stdin_open: true
+    tty: true
